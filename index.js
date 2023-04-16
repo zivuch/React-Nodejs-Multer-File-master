@@ -31,7 +31,7 @@ app.post('/profile-upload-single', upload.single('profile-file'), (req, res, nex
   var response = '<a href="/">Home</a><br>'
   response += "Files uploaded successfully.<br>"
   response += `<img src="${req.file.path}" /><br>`
-  return res.send(req.file.path)
+  return res.send(response)
 })
 
 app.post('/profile-upload-multiple', upload.array('profile-files', 12), function (req, res, next) {
